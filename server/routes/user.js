@@ -21,7 +21,7 @@ const User = mongoose.model("User", userSchema);
 // *******************
 // Post Request
 router.post("/", (req, res) => {
-  const josh = new User({ name: "Josh" });
+  const josh = new User({ name: req.body.name });
   josh.save(function (err, josh) {
     if (err) return console.error(err);
     console.log("Adding ", josh.name);
