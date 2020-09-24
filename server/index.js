@@ -15,7 +15,9 @@ const user = require('./routes/user')
 app.use('/api/user', user)
 
 
-
+app.get('/', function (req, res) {
+    res.send('Hello from CloudSnipe')
+})
 
 // Set port
 const port = process.env.PORT || 5000
