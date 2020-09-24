@@ -32,10 +32,15 @@ router.post("/", (req, res) => {
 // *******************
 // Get Request
 router.get("/", (req, res) => {
-  User.find(function (err, users) {
-    if (err) return console.log(err);
-    res.send(users);
-  });
+  try {
+    User.find(function (err, users) {
+      if (err) return console.log(err);
+      res.send(users);
+    });
+  } catch (error) {
+    console.log("Wasnt able to connect to DB and get users.")
+  }
+  
 });
 
 // *******************
