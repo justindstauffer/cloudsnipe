@@ -4,6 +4,8 @@ const cors = require('cors')
 
 const app = express()
 
+const home = require('./static/index.html')
+
 // Middleware
 app.use(bodyParser.json())
 app.use(cors())
@@ -16,7 +18,7 @@ app.use('/api/user', user)
 
 
 app.get('/', function (req, res) {
-    res.send('Hello from CloudSnipe')
+    res.sendFile(home)
 })
 
 // Set port
