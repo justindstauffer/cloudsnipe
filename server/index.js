@@ -4,7 +4,6 @@ const cors = require('cors')
 
 const app = express()
 
-const home = require('./static/index.html')
 
 // Middleware
 app.use(bodyParser.json())
