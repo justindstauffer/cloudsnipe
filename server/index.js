@@ -18,7 +18,7 @@ app.use('/api/user', user)
 
 
 app.get('/', function (req, res) {
-    res.sendFile(home)
+    res.send("Welcome to CloudSnipe")
 })
 
 // Set port
